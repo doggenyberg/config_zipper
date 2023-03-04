@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles/style.css" type="text/css">
+    <title>Config Zipper</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <div class="left">
+                <h1>Config Zipper</h1>
+                <h4>copy your CS:GO config faster.</h4>
+            </div>
+            <div class="right">
+                <ul>
+                    <li class="fromLeft">Home</li>
+                    <li class="fromLeft">Import</li>
+                    <li class="fromLeft">Upload</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main-container">
+            <section id="home-page">
+                <h3>With this program, you are able to copy your CS:GO config files faster. Make sure to know where your config files are stored before using this program.</h3>
+                <div class="info">
+                    <ol>
+                        <li class="panel"><div class="ol-1">
+                            <div class="circle">1</div>
+                            <p><span class="fromLeft"><b>Import</b></span> your CS:GO config folder. The program will zip the necessary files and save them to your computer.</p>
+                        </div></li>
+
+                        <li class="panel"><div class="ol-2">
+                            <div class="circle">2</div>
+                            <p>Assuming you will play on another computer, you will have to save the zipped folder manually. For example to a USB stick or cloud storage.</p>
+                        </div></li>
+                        <li class="panel"><div class="ol-3">
+                            <div class="circle">3</div>
+                            <p><span><b>Upload</b></span> the zipped folder to your game folder on the new/other computer.</p>
+                        </div></li>
+                    </ol>
+                </div>
+                <div class="button">
+                    <button class="button" id="home-next">Next</button>
+                </div>
+            </section>
+
+            <section id="import-page">
+                <h3><span><b>Import</b></span> your CS:GO game folder and press save.<br>The files will be <span><b>zipped</b></span> and <span><b>downloaded</b></span> to your computer.</h3>
+                <div class="panels">
+                    <div class="panel import">
+                        <label for="import">Import</label>
+                        <p>Select your CS:GO game folder.</p>
+                        <input type="file" name="import" id="import" webkitdirectory directory multiple>
+                    </div>
+
+                </div>
+                <div class="button">
+                    <button class="button" id="save">Save</button>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
