@@ -22,15 +22,16 @@ button, input[type="file"] {
     --btn-shadow-color: rgba(206, 45, 79, 0.25);
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    position: relative;
     width: 100%;
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
     color: #fff;
-
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
 }
 
 h1 {
@@ -63,9 +64,10 @@ p {
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav {
@@ -133,8 +135,9 @@ nav li:active {
 
 .main-container {
     position: absolute;
+    top: 50px;
     width: 700px;
-    top: 60px;
+    height: 634px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,6 +146,7 @@ nav li:active {
     background-image: var(--container-color);
     border-radius: 20px;
     overflow: hidden;
+    transition: height 0.45s ease-in-out;
 
     -webkit-box-shadow: -3px 4px 5px 3px rgba(0,0,0,0.25);
     -moz-box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.25);
@@ -309,8 +313,12 @@ section {
     box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.25);
 }
 
-.animation-fade {
-    animation: fade-out 0.3s linear;
+.animation-fade-out {
+    animation: fade-out 0.3s linear forwards;
+}
+
+.animation-fade-in {
+    animation: fade-in 0.3s linear forwards;
 }
 
 @keyframes fade-out {
@@ -318,11 +326,18 @@ section {
         opacity: 1;
     }
 
-    10% {
-        transform: translateY(10%);
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
     }
 
-    100% {
+    0% {
         opacity: 0;
         transform: translateY(-100%);
     }
