@@ -47,11 +47,13 @@ function findHeight(page) {
 const pageHome = document.getElementById("home-page");
 const pageImport = document.getElementById("import-page");
 const pageUpload = document.getElementById("upload-page");
+const pageHelp = document.getElementById("help-page");
 
 // Buttons
 const navBtnHome = document.getElementById("nav-home");
 const navBtnImport = document.getElementById("nav-import");
 const navBtnUpload = document.getElementById("nav-upload");
+const navBtnHelp = document.getElementById("nav-help");
 const homeBtnNext = document.getElementById("home-next");
 
 // Main container
@@ -64,4 +66,5 @@ let page = pageHome;
 navBtnImport.addEventListener("click", () => switchPage(page, pageImport));
 navBtnHome.addEventListener("click", () => switchPage(page, pageHome));
 navBtnUpload.addEventListener("click", () => switchPage(page, pageUpload));
+navBtnHelp.addEventListener("click", () => switchPage(page, pageHelp));
 homeBtnNext.addEventListener("click", () => switchPage(page, pageImport));
