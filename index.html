@@ -20,8 +20,8 @@
                 <ul>
                     <li id="nav-home" class="fromLeft">Home</li>
                     <li id="nav-import" class="fromLeft">Import</li>
-                    <li id="nav" class="fromLeft">Upload</li>
-                    <li class="fromLeft">Help</li>
+                    <li id="nav-upload" class="fromLeft">Upload</li>
+                    <li id="nav-help" class="fromLeft">Help</li>
                 </ul>
             </div>
         </nav>
@@ -52,7 +52,7 @@
             </section>
 
             <section id="import-page">
-                <h3><span><b>Import</b></span> your CS:GO game folder and press save.<br>The files will be <span><b>zipped</b></span> and <span><b>downloaded</b></span> to your computer.</h3>
+                <h3><span><b>Import</b></span> your CS:GO game folder and press <span class="red"><b>save</b></span>.<br>The files will be zipped and downloaded to your computer.</h3>
                 <div class="panels">
                     <div class="panel import">
                         <label for="import">Import</label>
@@ -65,12 +65,41 @@
                     <button class="button" id="save">Save</button>
                 </div>
             </section>
+
+            <section id="upload-page">
+                <h3>Select your CS:GO config <span><b>source</b></span>. Then <span><b>upload</b></span> your zipped folder you downloaded from the previous step and press <span class="red"><b>upload</b></span>. The files will be extracted to your CS:GO config folder.</h3>
+                <div class="panels">
+                    <div class="panel source">
+                        <label for="source">Source</label>
+                        <p>Select your CS:GO game folder.</p>
+                        <input type="file" name="source" id="source" webkitdirectory directory multiple>
+                    </div>
+
+                    <div class="panel upload">
+                        <label for="upload">Upload</label>
+                        <p>Select the zipped folder.</p>
+                        <input type="file" name="upload" id="upload" webkitdirectory directory multiple>
+                    </div>
+
+                </div>
+                <div class="button">
+                    <button class="button" id="save">Upload</button>
+                </div>
+            </section>
         </div>
 
     </div>
 
     <footer>
+        <div class="left">
+            <p>Douglas Nyberg</p>
+            <a href="https://github.com/doggenyberg" target="_blank"><img src="resources/img/icon/github.png" alt=""></a>
+            <a href=""><img src="resources/img/icon/linkedin.png" alt=""></a>
+        </div>
 
+        <div class="right">
+            <a target="_blank" href="https://icons8.com/icon/4MhUS4CzoLbx/github">GitHub</a> and  <a target="_blank" href="https://icons8.com/icon/qNUNvR9aEWql/linkedin-circled">LinkedIn</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </div>
     </footer>
 
 </body>
