@@ -162,7 +162,7 @@ nav li:active {
     margin-bottom: 40px;
 }
 
-#import-page, #upload-page {
+#import-page, #upload-page, #home-page {
     display: none;
 }
 
@@ -323,6 +323,26 @@ section {
     width: 45%;
 }
 
+#help-page {
+    align-items: flex-start;
+}
+
+#help-page h3 {
+    color: var(--h3b-color);
+    margin-bottom: 0;
+}
+
+#help-page p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+#help-page .help {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 footer {
     position: fixed;
     height: 7%;
@@ -332,11 +352,11 @@ footer {
 }
 
 .animation-fade-out {
-    animation: fade-out 0.3s linear forwards;
+    animation: fade-out 0.2s linear forwards;
 }
 
 .animation-fade-in {
-    animation: fade-in 0.3s linear forwards;
+    animation: fade-in 0.2s linear forwards;
 }
 
 @keyframes fade-out {
@@ -346,7 +366,7 @@ footer {
 
     100% {
         opacity: 0.1;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
     }
 }
 
@@ -357,6 +377,6 @@ footer {
 
     0% {
         opacity: 0.1;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
     }
 }
