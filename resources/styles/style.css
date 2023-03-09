@@ -372,6 +372,23 @@ footer {
     width: 100%;
     bottom: 0;
     background-color: #0e0a13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p, a {
+    font-size: 0.85rem;
+    color: #494949;
+}
+
+footer .left {
+    display: flex;
+    align-items: center;
+}
+
+footer .left a {
+    transform: scale(0.8);
 }
 
 .animation-fade-out {
