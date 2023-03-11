@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 
 * {
     padding: 0;
@@ -77,7 +78,7 @@ p {
 nav {
     position: relative;
     width: 700px;
-    margin-bottom: 30px;
+
 
     display: flex;
     justify-content: space-between;
@@ -87,7 +88,7 @@ nav {
 
 nav h1 {
     position: absolute;
-    top: -65px;
+    top: -40px;
 }
 
 nav .left {
@@ -162,7 +163,7 @@ nav li:active {
     margin-bottom: 40px;
 }
 
-#import-page, #upload-page, #home-page {
+#import-page, #upload-page, #help-page {
     display: none;
 }
 
@@ -334,20 +335,51 @@ section {
 }
 
 #help-page p {
-    color: #acacac;
+    color: #cecece;
     font-size: 0.9rem;
 }
 
-#help-page ol {
-    margin-top: 5px;
-    margin-left: 20px;
+#help-page .help ol, .help ul {
+    width: 100%;
+    padding: 10px 5px;
     font-size: 0.85rem;
     display: block;
     text-align: left;
+    background-color: #181818;
+    border-radius: 5px;
+    counter-reset: my-counter;
+    list-style-type: none;
+}
+
+#help-page .help ul {
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
 #help-page li {
-    margin-bottom: 3px;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #cecece;
+}
+
+#help-page ol li {
+    counter-increment: my-counter;
+    padding-left: 20px; /* add some space between the number and the text */
+}
+
+#help-page .help .source, .help li {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+}
+
+#help-page ol li::before {
+    content: counter(my-counter) ". ";
+    display: inline-block;
+    width: 15px; /* set the width of the number */
+    margin-left: -20px; /* move the number back to the left to align with the text */
+    text-align: right;
+    margin-right: 5px;
 }
 
 #help-page .help {
@@ -359,17 +391,18 @@ section {
 
 #help-page .panel {
     width: 100%;
-    padding: 10px 15px;
+    padding: 15px 20px;
 }
 
 #help-page .help .source {
+    width: 100%;
     margin-top: 5px;
     font-size: 0.85rem;
-    padding: 2px 10px;
+    padding: 5px 10px;
     background-color: #181818;
     list-style-position: inside;
     color: #cecece;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 footer {
@@ -405,6 +438,10 @@ footer .left a {
     animation: fade-in 0.2s linear forwards;
 }
 
+.animation-shake {
+    animation: shake 0.35s linear;
+}
+
 @keyframes fade-out {
     0% {
         opacity: 1;
@@ -424,5 +461,27 @@ footer .left a {
     0% {
         opacity: 0.1;
         transform: translateY(-120%);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    99% {
+        transform: translateX(0);
     }
 }
